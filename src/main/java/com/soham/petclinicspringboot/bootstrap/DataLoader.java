@@ -11,6 +11,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Component;
 
+import java.util.Set;
+
 @Component
 @ComponentScan(basePackages = {"com.soham.petclinicspringboot"})
 public class DataLoader implements CommandLineRunner {
@@ -41,9 +43,9 @@ public class DataLoader implements CommandLineRunner {
         ownerService.save(owner2);
 
         Owner owner3= new Owner();
-        owner1.setFirstName("Cristiano");
-        owner1.setLastName("Ronaldo");
-        owner1.setId(3l);
+        owner3.setFirstName("Cristiano");
+        owner3.setLastName("Ronaldo");
+        owner3.setId(3l);
 
         ownerService.save(owner3);
 
@@ -64,7 +66,6 @@ public class DataLoader implements CommandLineRunner {
         vetService.save(vet2);
 
         System.out.println("Loaded Vets");
-
 
     }
 }
