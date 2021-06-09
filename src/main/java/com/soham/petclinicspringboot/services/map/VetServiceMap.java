@@ -3,10 +3,11 @@ package com.soham.petclinicspringboot.services.map;
 import com.soham.petclinicspringboot.model.Vet;
 import com.soham.petclinicspringboot.services.CrudService;
 import com.soham.petclinicspringboot.services.VetService;
+import org.springframework.stereotype.Service;
 
 import java.util.Map;
 import java.util.Set;
-
+@Service
 public class VetServiceMap extends AbstractMapService<Vet,Long> implements CrudService<Vet,Long>, VetService {
     @Override
     public Set<Vet> findAll() {
