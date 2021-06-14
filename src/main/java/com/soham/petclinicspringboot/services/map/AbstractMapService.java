@@ -1,7 +1,6 @@
 package com.soham.petclinicspringboot.services.map;
 
 import com.soham.petclinicspringboot.model.BaseEntity;
-import com.soham.petclinicspringboot.services.CrudService;
 
 import java.util.*;
 
