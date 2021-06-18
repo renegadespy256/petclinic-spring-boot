@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org"
       xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
-      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" th:replace="~{fragments/layout :: layout (~{::body},'vets')}">
 <head>
     <meta charset="UTF-8">
     <title>Vets Index</title>
@@ -10,7 +10,7 @@
 <body>
 <!--/*@thymesVar id="vet" type="com.soham.petclinicspringboot.model.Vet"*/-->
 <h1 th:text="'List of Vets'">Owners</h1>
-<table>
+<table id="vets" class="table table-striped">
     <thead>
     <tr>
         <th>ID</th>
