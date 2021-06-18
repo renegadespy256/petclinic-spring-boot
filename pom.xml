@@ -70,6 +70,22 @@
 			<artifactId>junit</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-api</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-engine</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-junit-jupiter</artifactId>
+			<version>2.22.0</version>
+		<scope>test</scope>
+		</dependency>
 		<!-- webjars -->
 		<dependency>
 			<groupId>org.webjars</groupId>
@@ -177,6 +193,14 @@
 						<artifactId>bootstrap</artifactId>
 						<version>${webjars-bootstrap.version}</version>
 					</dependency>
+					<!-- https://mvnrepository.com/artifact/org.mockito/mockito-core -->
+					<dependency>
+						<groupId>org.mockito</groupId>
+						<artifactId>mockito-core</artifactId>
+						<version>${mockito.version}</version>
+						<scope>test</scope>
+					</dependency>
+
 				</dependencies>
 			</plugin>
 		</plugins>
