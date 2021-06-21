@@ -1,8 +1,10 @@
 package com.soham.petclinicspringboot.bootstrap;
 
 import com.soham.petclinicspringboot.model.Owner;
+import com.soham.petclinicspringboot.model.PetType;
 import com.soham.petclinicspringboot.model.Vet;
 import com.soham.petclinicspringboot.services.OwnerService;
+import com.soham.petclinicspringboot.services.PetTypeService;
 import com.soham.petclinicspringboot.services.VetService;
 import com.soham.petclinicspringboot.services.map.OwnerServiceMap;
 import com.soham.petclinicspringboot.services.map.VetServiceMap;
@@ -11,23 +13,34 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Component;
 
-import java.util.Set;
-
 @Component
 @ComponentScan(basePackages = {"com.soham.petclinicspringboot"})
 public class DataLoader implements CommandLineRunner {
 
     private final OwnerService ownerService;
     private final VetService vetService;
+    private final PetTypeService petTypeService;
 
     @Autowired
-    public DataLoader(OwnerServiceMap ownerService, VetServiceMap vetService) {
+    public DataLoader(OwnerServiceMap ownerService, VetServiceMap vetService, PetTypeService petTypeService) {
         this.ownerService = ownerService;
         this.vetService = vetService;
+        this.petTypeService = petTypeService;
     }
 
     @Override
     public void run(String... args) throws Exception {
+
+        PetType dog=new PetType();
+        dog.setName("Dog");
+
+        PetType savedDog = petTypeService.save(dog);
+
+        PetType cat=new PetType();
+        dog.setName("cat");
+
+        PetType savedCat = petTypeService.save(cat);
+
         Owner owner1= new Owner();
         owner1.setFirstName("Soham");
         owner1.setLastName("Bhattacharjee");
