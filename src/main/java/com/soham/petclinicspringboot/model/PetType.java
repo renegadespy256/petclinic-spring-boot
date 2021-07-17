@@ -1,5 +1,10 @@
 package com.soham.petclinicspringboot.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "pet_type")
 public class PetType extends BaseEntity{
 
     private String name;

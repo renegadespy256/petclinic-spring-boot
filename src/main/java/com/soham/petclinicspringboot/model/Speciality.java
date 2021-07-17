@@ -1,5 +1,10 @@
 package com.soham.petclinicspringboot.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "specialities")
 public class Speciality {
 
     private String description;

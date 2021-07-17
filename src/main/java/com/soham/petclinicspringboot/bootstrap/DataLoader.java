@@ -7,6 +7,7 @@ import com.soham.petclinicspringboot.services.OwnerService;
 import com.soham.petclinicspringboot.services.PetTypeService;
 import com.soham.petclinicspringboot.services.VetService;
 import com.soham.petclinicspringboot.services.map.OwnerServiceMap;
+import com.soham.petclinicspringboot.services.map.PetTypeServiceMap;
 import com.soham.petclinicspringboot.services.map.VetServiceMap;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -22,7 +23,7 @@ public class DataLoader implements CommandLineRunner {
     private final PetTypeService petTypeService;
 
     @Autowired
-    public DataLoader(OwnerServiceMap ownerService, VetServiceMap vetService, PetTypeService petTypeService) {
+    public DataLoader(OwnerServiceMap ownerService, VetServiceMap vetService, PetTypeServiceMap petTypeService) {
         this.ownerService = ownerService;
         this.vetService = vetService;
         this.petTypeService = petTypeService;
