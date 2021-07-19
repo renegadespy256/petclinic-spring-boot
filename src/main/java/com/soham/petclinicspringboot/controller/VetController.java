@@ -1,7 +1,6 @@
 package com.soham.petclinicspringboot.controller;
 
 import com.soham.petclinicspringboot.services.VetService;
-import com.soham.petclinicspringboot.services.map.VetServiceMap;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,7 +10,7 @@ public class VetController {
 
     private final VetService vetService;
 
-    public VetController(VetServiceMap vetService) {
+    public VetController(VetService vetService) {
         this.vetService = vetService;
     }
 
